@@ -10,3 +10,9 @@ header div a {
   font-family: Arial, Helvetica, sans-serif;
   
 }
+main{
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+  margin: auto;
+}
