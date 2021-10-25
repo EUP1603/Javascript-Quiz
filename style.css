@@ -9,9 +9,23 @@ header div a {
   font-style: none;
   font-family: Arial, Helvetica, sans-serif;
 }
-main{
+main {
   text-align: center;
   font-style: normal;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
   margin: auto;
+  display: relative;
 }
+
+button{
+  display: block;
+  font-size: 15px;
+  font-style: bold;
+  width: 500px;
+  border: thick;
+  padding-top: 75px;
+  text-align: center;
+  padding-bottom: 75px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;}
