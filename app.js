@@ -1,4 +1,4 @@
-/* --------------- Query Selectors --------------- */
+//Querey Selectors
 
 let quiz = document.querySelector("#quiz");
 let intro = document.querySelector("#introduction");
@@ -21,7 +21,7 @@ let initials = document.querySelector("#initials");
 let clearHighscoresBtn = document.querySelector("#clearHighscoresBtn");
 let image_area = document.querySelector("#image_area");
 
-/* ------- Global Variable Declarations ------- */
+//Global Variables
 
 let totalSeconds = 250;
 let timeRemining = totalSeconds;
@@ -36,7 +36,7 @@ let time = setInterval(timer, 1000);
 let justRegistered = false;
 clearInterval(time);
 
-/* --------------- Quiz Array --------------- */
+//Questions and answers
 
 // Questions based on: laffgaff "DISNEY TRIVIA QUESTIONS AND ANSWERS": https://laffgaff.com/disney-trivia-questions-answers/
 let quizArray = [
@@ -144,7 +144,7 @@ let quizArray = [
   
 ];
 
-/* ------------- Event Management ------------- */
+//Event Managers
 
 startBtn.addEventListener("click", startQuiz);
 answersDiv.addEventListener("click", assesSelection);
@@ -161,7 +161,7 @@ $("#staticBackdrop").on("hidden.bs.modal", function (e) {
 
 init();
 
-/* ------------- Functions Declaration ------------- */
+//Functions
 
 function init() {
   timeSpan.textContent = timeRemining;
@@ -171,7 +171,7 @@ function init() {
   intro.style.display = "block";
   startBtn.style.display = "block";
   progressBar.style.display = "none";
-
+  //global Variables
   totalSeconds = 250;
   timeRemining = totalSeconds;
   secondsElapsed = 0;
@@ -183,6 +183,7 @@ function init() {
   justRegistered = false;
   timeSpan.textContent = timeRemining;
 
+ 
   if (localStorage.getItem("highscore")) {
     localHighscoresArray = localStorage.getItem("highscore").split(",");
   }
@@ -197,6 +198,7 @@ function init() {
   );
 }
 
+
 function startQuiz() {
   intro.style.display = "none";
   startBtn.style.display = "none";
@@ -205,6 +207,7 @@ function startQuiz() {
   progressBar.style.display = "block";
   showQuestion();
 }
+
 
 function timer() {
   timeRemining = totalSeconds - secondsElapsed - 1 - discountSeconds;
@@ -217,14 +220,11 @@ function timer() {
   }
 }
 
+
 function showQuestion() {
   questionH5.textContent = quizArray[currentQuestion].question;
   var optionsBtnsArray = [];
   var indexArray = [];
-  var image = document.createElement("img");
-  image.setAttribute("src", quizArray[currentQuestion].image);
-  image.setAttribute("class", "movie-image rounded");
-  image_area.append(image);
 
   for (i = 0; i < quizArray[currentQuestion].options.length; i++) {
     var questionBtn = document.createElement("button");
