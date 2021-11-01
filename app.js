@@ -23,7 +23,7 @@ let image_area = document.querySelector("#image_area");
 
 //Global Variables
 
-let totalSeconds = 250;
+let totalSeconds = 300;
 let timeRemining = totalSeconds;
 let secondsElapsed = 0;
 let discountSeconds = 0;
